@@ -9,9 +9,15 @@ const mainRouter=require('./routers/main-router');
 const app = express(); //ejecuto express y me devuelve una aplicacion> funcion>>CONFIGURO EXPRESS
 
 
-//CONFIGURAMOS SERVIDOR
-app.listen(3001, () => {
-  console.log('Servidor funcionando');
+//CONFIGURAMOS SERVIDOR>> lo inutilizo porque utilizo la variable PORT 
+//app.listen(3001, () => {
+  //console.log('Servidor funcionando');
+//});
+
+//servidor para el render
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Se prendió en el puerto ${PORT}`);
 });
 
 //LE INDICO AL SERVIDOR DONDE ESTA LA CARPETA DE ARCHIVOS PUBLICOS>/PUBLIC
