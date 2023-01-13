@@ -15,7 +15,7 @@ const app = express(); //ejecuto express y me devuelve una aplicacion> funcion>>
 //});
 
 //servidor para el render
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Se prendió en el puerto ${PORT}`);
 });
